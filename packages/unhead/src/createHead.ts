@@ -95,6 +95,7 @@ export function createHeadCore<T extends {} = Head>(options: CreateHeadOptions =
           updated()
         },
         // a patch is the same as creating a new entry, just a nice DX
+        // 覆盖entry上的input
         patch(input) {
           entries = entries.map((e) => {
             if (e._i === entry._i) {
